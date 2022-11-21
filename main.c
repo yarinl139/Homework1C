@@ -13,6 +13,7 @@ int main()
         printf("%d, ", i);
         }
     }
+    printf("\n");
     printf("The Palindromes numbers are: ");
     for(int i=x;i<=y;i++)
     {
