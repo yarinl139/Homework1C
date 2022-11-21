@@ -3,8 +3,9 @@
 int main()
 {
     int x,y;
-    scanf("%d",&x);
-    scanf("%d",&y);
+
+    scanf("%d %d",&x , &y);
+    
     printf("The Armstrong numbers are: ");
     for(int i=x;i<=y;i++)
     {
