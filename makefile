@@ -9,11 +9,11 @@ recursived: libclassrec.so
 loopd: libclassloops.so
 
 
-maindrec: main.o recursived
-	gcc -Wall main.o -L. -lclassrec -o maindrec
+maindrec: main.o libclassrec.so
+	gcc -Wall main.o ./libclassrec.so -o maindrec
 
-maindloop: main.o loopd
-	gcc -Wall main.o -L. -lclassloops -o maindloop
+maindloop: main.o libclassloops.so
+	gcc -Wall main.o ./libclassloops.so -o maindloop
 
 mains: main.o recursives
 	gcc -Wall -o mains main.o libclassrec.a
