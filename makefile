@@ -1,4 +1,4 @@
-all: mains maindloop maindrec loops recursives recursived loopd
+all: mains maindloop maindrec loops recursives
 
 clean:
 	rm *.o *.a *.so mains maindrec maindloop
@@ -11,11 +11,9 @@ loopd: libclassloops.so
 
 maindrec: main.o recursived
 	gcc -Wall main.o -L. -lclassrec -o maindrec
-	export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 
 maindloop: main.o loopd
 	gcc -Wall main.o -L. -lclassloops -o maindloop
-	export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 
 mains: main.o recursives
 	gcc -Wall -o mains main.o libclassrec.a
