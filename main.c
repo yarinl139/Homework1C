@@ -3,16 +3,14 @@
 int main()
 {
     int x,y;
-    printf("enter 2 numbers");
     scanf("%d",&x);
     scanf("%d",&y);
-    
     printf("The Armstrong numbers are: ");
     for(int i=x;i<=y;i++)
     {
         if (isArmstrong(i))
         {
-        printf("%d , ", i);
+        printf("%d, ", i);
         }
     }
     printf("The Palindromes numbers are: ");
@@ -20,7 +18,7 @@ int main()
     {
         if (isPalindrome(i))
         {
-            printf("%d , ", i);
+            printf("%d, ", i);
         }
     }
     printf("\n");
@@ -29,7 +27,7 @@ int main()
     {
         if (isPrime(i))
         {
-            printf("%d , ", i);
+            printf("%d, ", i);
         }
     }
     printf("\n");
@@ -38,10 +36,8 @@ int main()
     {
         if (isStrong(i))
         {
-            printf("%d , ", i);
+            printf("%d, ", i);
         }
     }
-    printf("\n");
-  
     return 0;
 }
